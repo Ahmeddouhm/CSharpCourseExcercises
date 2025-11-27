@@ -1,0 +1,8 @@
+<Solution>
+  <Project Path="Array Excercises/Array Excercises.csproj" Id="fabdf31c-71b4-4edb-85a1-aa3bafa12fe8" />
+  <Project Path="BirthdayGetter/BirthdayGetter.csproj" />
+  <Project Path="Calc/Calc.csproj" Id="ef884f3e-07ce-407a-876b-f146a2535253" />
+  <Project Path="Gadwal El-Darb/Gadwal El-Darb.csproj" Id="eee04392-f917-4687-95fc-e251b5ebc24e" />
+  <Project Path="Loops Excersice/Loops Excersice.csproj" Id="ee0c91be-34fa-41ee-b67d-ac35f21d401a" />
+  <Project Path="String Manipulation/String Manipulation.csproj" Id="8b471c7c-e84f-4de1-98c0-953a40b5bbea" />
+</Solution>
