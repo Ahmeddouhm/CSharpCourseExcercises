@@ -31,45 +31,52 @@
 Console.WriteLine("===========================");
 Console.WriteLine("Welcome To Sort Array!");
 Console.WriteLine("===========================");
-Random rand = new Random();
-int[] arr = new int[9];
-int[] userArray = new int[9];
-//Create Random Array
-for (int i = 0; i < arr.Length; i++)
+Console.Write($"Enter Array Size : ");
+int arrSize = Convert.ToInt16(Console.ReadLine());
+Console.Write($"Enter Array Range Of Values : ");
+int arrRangeOfValues = Convert.ToInt16(Console.ReadLine());
+CreateRandomArray(arrSize , arrRangeOfValues);
+static void CreateRandomArray(int arrSize , int arrRangeOfValues)
 {
-    int numToCheck;
-	do
-	{
-      numToCheck = rand.Next(1, 10);
-
-    } while (arr.Contains(numToCheck));
-
-    arr[i] = numToCheck;
-    Console.Write($"[{arr[i]}] ");
-}
-//Input From User
-for (int i = 0; i < userArray.Length; i++)
-{
-    Console.Write($"\nEnter index[{i}] : ");
-    userArray[i] = Convert.ToInt16(Console.ReadLine());
-    foreach (var item in userArray)
+    Random rand = new Random();
+    int[] arr = new int[arrSize];
+    int[] userArray = new int[arrSize];
+    //Create Random Array
+    for (int i = 0; i < arr.Length; i++)
     {
-        Console.Write($"{item} ");
+        int numToCheck;
+        //Check The Randomize Of Values
+        do
+        {
+            numToCheck = rand.Next(1,arrRangeOfValues);
+
+        } while (arr.Contains(numToCheck));
+
+        arr[i] = numToCheck;
+        Console.Write($"[{arr[i]}] ");
+    }
+    //Input From User
+    for (int i = 0; i < userArray.Length; i++)
+    {
+        Console.Write($"\nEnter index[{i}] : ");
+        userArray[i] = Convert.ToInt16(Console.ReadLine());
+        foreach (var item in userArray)
+        {
+            Console.Write($"{item} ");
+        }
+    }
+    //Vaildate User Input
+    Array.Sort(arr);
+    for (int i = 0; i < userArray.Length; i++)
+    {
+        if (arr[i] == userArray[i])
+        {
+            Console.Write($"\nindex[{i}] True ");
+        }
+        else
+        {
+            Console.Write($"\nindex[{i}] False ");
+        }
     }
 }
-
-//Vaildate The Result
-Array.Sort(arr);
-for (int i = 0; i < userArray.Length; i++)
-{
-    if (arr[i] == userArray[i])
-    {
-        Console.Write($"\nindex[{i}] True ");
-    }
-    else
-    {
-        Console.Write($"\nindex[{i}] False ");
-    }
-}
-
 #endregion
