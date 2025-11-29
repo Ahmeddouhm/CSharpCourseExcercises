@@ -98,3 +98,37 @@
 //    return sum;
 //}
 #endregion
+
+#region Extension Methods
+//string myName = "Ahmed Mamdouh Hassan Abdelwahab";
+//Console.WriteLine(myName.WordCounter());
+//string myNumber = "20500";
+//Console.WriteLine(myNumber.IsNumber());
+
+//static class ExtensionMethods 
+//{
+//    public static int WordCounter(this string text) 
+//    {
+//        string[] textCount = text.Split(' ');
+//        return textCount.Length;
+//    }
+
+//    public static bool IsNumber(this string text) 
+//    {
+//        if (int.TryParse(text, out int n))
+//        {
+//            Console.WriteLine(n);
+//            return true;
+//        }
+//        else
+//        {
+//            return false;
+//        }
+//    }
+//}
+
+#endregion
+
+#region Recursive Methods
+
+#endregion
