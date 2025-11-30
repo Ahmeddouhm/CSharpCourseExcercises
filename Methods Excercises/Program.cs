@@ -131,47 +131,84 @@
 
 #region Recursive Methods
 //Calc Factorial nonRecursiveMethod
-Console.WriteLine(5.CalcFactorial());
-Console.WriteLine(5.CalcFactorialR());
-string path = @"D:\namespace";
-StaticMethods.DisplayFolders(path , 3);
+//Console.WriteLine(5.CalcFactorial());
+//Console.WriteLine(5.CalcFactorialR());
+//string path = @"D:\namespace";
+//StaticMethods.DisplayFolders(path , 3);
 
-static class StaticMethods 
+//static class StaticMethods 
+//{
+//    public static int CalcFactorial(this int num) 
+//    {
+//        int result=1;
+//        if (num > 0)
+//        {
+//            for (int i = num; i > 0; i--)
+//            {
+//                result *= i;
+//            }
+//        }
+//        else
+//        {
+//            Console.WriteLine("Enter Positive Number");
+//        }
+
+//        return result;
+//    }
+//    public static int CalcFactorialR(this int num) 
+//    {
+//        if (num > 0)
+//        {
+//        return num * CalcFactorialR(num - 1);
+//        }
+//        return 1;               
+//    }
+
+//    public static void DisplayFolders(string path, int indent)
+//    {
+//        foreach (var folder in Directory.GetDirectories(path))
+//        {
+//            Console.WriteLine($"{new string(' ', indent)} {Path.GetFileName(folder)}");
+//            DisplayFolders(folder, indent + 1);
+//        }
+//    }
+
+//}
+#endregion
+
+#region Recursion Excercise
+
+//5.PrintNumSequence();
+Console.WriteLine(12190.SumOfDigits());
+Console.WriteLine("Hello Ahmed".ReverseString());
+;
+static class RecursionExcercise
 {
-    public static int CalcFactorial(this int num) 
+    public static void PrintNumSequence(this int num) 
     {
-        int result=1;
-        if (num > 0)
-        {
-            for (int i = num; i > 0; i--)
-            {
-                result *= i;
-            }
-        }
-        else
-        {
-            Console.WriteLine("Enter Positive Number");
-        }
-
-        return result;
-    }
-    public static int CalcFactorialR(this int num) 
-    {
-        if (num > 0)
-        {
-        return num * CalcFactorialR(num - 1);
-        }
-        return 1;               
+        if (num == 0)
+            return;
+        Console.WriteLine($"{num}");
+        PrintNumSequence(num - 1);
     }
 
-    public static void DisplayFolders(string path, int indent)
+    public static int SumOfDigits(this int num) 
     {
-        foreach (var folder in Directory.GetDirectories(path))
+        if (num==0)
         {
-            Console.WriteLine($"{new string(' ', indent)} {Path.GetFileName(folder)}");
-            DisplayFolders(folder, indent + 1);
+            return 0;
         }
+        int lastDigit = num % 10;
+        
+        return lastDigit + SumOfDigits(num / 10); ;
     }
+    public static string ReverseString(this string text)
+    {
+        if (text.Length <= 0)
+            return string.Empty;
 
+        return ReverseString(text.Substring(1)) + text[0];
+
+    }
 }
 #endregion
