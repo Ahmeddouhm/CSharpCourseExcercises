@@ -180,7 +180,7 @@
 
 //5.PrintNumSequence();
 Console.WriteLine(12190.SumOfDigits());
-Console.WriteLine("Hello Ahmed".ReverseString());
+Console.WriteLine("1234".ReverseString());
 ;
 static class RecursionExcercise
 {
@@ -206,9 +206,7 @@ static class RecursionExcercise
     {
         if (text.Length <= 0)
             return string.Empty;
-
         return ReverseString(text.Substring(1)) + text[0];
-
     }
 }
 #endregion
