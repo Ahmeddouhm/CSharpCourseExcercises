@@ -176,37 +176,37 @@
 //}
 #endregion
 
-#region Recursion Excercise
+//#region Recursion Excercise
 
-//5.PrintNumSequence();
-Console.WriteLine(12190.SumOfDigits());
-Console.WriteLine("1234".ReverseString());
-;
-static class RecursionExcercise
-{
-    public static void PrintNumSequence(this int num) 
-    {
-        if (num == 0)
-            return;
-        Console.WriteLine($"{num}");
-        PrintNumSequence(num - 1);
-    }
+////5.PrintNumSequence();
+//Console.WriteLine(12190.SumOfDigits());
+//Console.WriteLine("1234".ReverseString());
+//;
+//static class RecursionExcercise
+//{
+//    public static void PrintNumSequence(this int num) 
+//    {
+//        if (num == 0)
+//            return;
+//        Console.WriteLine($"{num}");
+//        PrintNumSequence(num - 1);
+//    }
 
-    public static int SumOfDigits(this int num) 
-    {
-        if (num==0)
-        {
-            return 0;
-        }
-        int lastDigit = num % 10;
+//    public static int SumOfDigits(this int num) 
+//    {
+//        if (num==0)
+//        {
+//            return 0;
+//        }
+//        int lastDigit = num % 10;
         
-        return lastDigit + SumOfDigits(num / 10); ;
-    }
-    public static string ReverseString(this string text)
-    {
-        if (text.Length <= 0)
-            return string.Empty;
-        return ReverseString(text.Substring(1)) + text[0];
-    }
-}
-#endregion
+//        return lastDigit + SumOfDigits(num / 10); ;
+//    }
+//    public static string ReverseString(this string text)
+//    {
+//        if (text.Length <= 0)
+//            return string.Empty;
+//        return ReverseString(text.Substring(1)) + text[0];
+//    }
+//}
+//#endregion
