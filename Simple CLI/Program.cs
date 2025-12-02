@@ -7,7 +7,7 @@
             Console.BackgroundColor = ConsoleColor.Green;
             Console.ForegroundColor = ConsoleColor.Black;
             Console.WriteLine("Welcome To Simple CLI :)");
-            bool isWorking = false;
+            bool isFinished = false;
             do
             {
                 //Take User Input
@@ -57,13 +57,13 @@
                         break;
                     //Exit CLI
                     case "ex":
-                        isWorking = true;
+                        isFinished = true;
                         break;
                     default:
                         Console.WriteLine("Enter Valid Command");
                         break;
                 }
-            } while (!isWorking);
+            } while (!isFinished);
         }
     }
 }
