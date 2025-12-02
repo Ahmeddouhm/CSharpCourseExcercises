@@ -8,7 +8,7 @@
         private static void AddTask()
         {
             Console.WriteLine("=======================");
-            Console.WriteLine("Enter Task Name : ");
+            Console.Write("Enter Task Name : ");
             string? task = Console.ReadLine();
             tasks[taskIndex] = task;
             Console.WriteLine("=======================");
@@ -20,7 +20,7 @@
         private static void DeleteTask()
         {
             Console.WriteLine("=======================");
-            Console.WriteLine("Enter Task Number : ");
+            Console.Write("Enter Task Number : ");
             int taskArrayIndex = int.Parse(Console.ReadLine());
             tasks[taskArrayIndex-1] = string.Empty;
             Console.WriteLine("=======================");
@@ -45,7 +45,8 @@
             Console.WriteLine("=======================");
 
             // Username Input
-            Console.WriteLine("Enter Your Username");
+            Console.Write("Enter Your Username" +
+                "\n>> ");
             string userName = Console.ReadLine();
             Console.WriteLine("=======================");
             Console.WriteLine($"Hello {userName} !");
@@ -54,10 +55,11 @@
             // User Choice Input 
             do
             {
-                Console.WriteLine("Choose From : \n1)Add New Task" +
+                Console.Write("Choose From : \n1)Add New Task" +
                     "\n2)Delete Task " +
                     "\n3)View Tasks " +
-                    "\n4)Exit Tracker ");
+                    "\n4)Exit Tracker " +
+                    "\n>> ");
                 string userInput = Console.ReadLine();
                 switch (userInput)
                 {
@@ -77,6 +79,7 @@
                         isFinished = true;
                         break;
                     default:
+                        Console.WriteLine("=======================");
                         Console.WriteLine("Enter From Above Choices");
                         Console.WriteLine("=======================");
                         break;
