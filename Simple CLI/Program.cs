@@ -17,8 +17,6 @@
                 int splitIndex = userInput.IndexOf(' ');
                 string command = userInput.Substring(0, splitIndex).ToLower();
                 string path = userInput.Substring(splitIndex + 1);
-                Console.WriteLine(command);
-                Console.WriteLine(path);
                 switch (command)
                 {
                     //List Directories & Files
@@ -58,6 +56,13 @@
                     //Exit CLI
                     case "ex":
                         isFinished = true;
+                        break;
+                    case "?":
+                        Console.WriteLine("ls : Lists Directories and paths" +
+                            "\nmkdir : Makes a File Or Directory within same path" +
+                            "\ninfo : Shows File Or Directory Details" +
+                            "\nrm : Deletes a File Or Directory" +
+                            "\nex : Exit CLI");
                         break;
                     default:
                         Console.WriteLine("Enter Valid Command");
