@@ -31,6 +31,9 @@ do
             isFinished = true;
             break;
         default:
+            Console.WriteLine("=====================");
+            Console.WriteLine("Enter A Valid Command !");
+            Console.WriteLine("=====================");
             break;
     }
 } while (!isFinished);
