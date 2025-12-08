@@ -5,6 +5,7 @@
   <Project Path="Enums/Enums.csproj" Id="92bf58b0-b35e-4271-bfff-1c20a300af4d" />
   <Project Path="Exceptions/Exceptions.csproj" Id="7e88585a-63ad-4f66-9045-a5bea44b1233" />
   <Project Path="Gadwal El-Darb/Gadwal El-Darb.csproj" Id="eee04392-f917-4687-95fc-e251b5ebc24e" />
+  <Project Path="ListsExcercises/ListsExcercises.csproj" Id="b48bf223-63b2-4706-a1f8-073d65b74636" />
   <Project Path="Loops Excersice/Loops Excersice.csproj" Id="ee0c91be-34fa-41ee-b67d-ac35f21d401a" />
   <Project Path="Methods Excercises/Methods Excercises.csproj" Id="9462508d-0e57-4fb7-afb4-676c5babf2e7" />
   <Project Path="OOP Excercises/OOP Excercises.csproj" Id="19b05b92-ccbe-4eec-becd-c3cebb467252" />
