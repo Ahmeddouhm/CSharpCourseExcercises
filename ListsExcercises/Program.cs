@@ -5,8 +5,10 @@ familyPersons.Add(new Family("Mohamed Hassan" , 49 , Role.Father));
 familyPersons.Add(new Family("Safaa Mahmoud" , 56 , Role.Mother));
 familyPersons.Add(new Family("Eman Mohamed" , 49 , Role.Mother));
 familyPersons.Add(new Family("Shimaa Mohamed" , 41 , Role.Mother));
+
 NameSorting nameSorting = new NameSorting();
 familyPersons.Sort(nameSorting);
+
 foreach (var p in familyPersons)
 {
     Console.WriteLine("============");
@@ -14,6 +16,27 @@ foreach (var p in familyPersons)
     Console.WriteLine($"Age : {p.Age}");
     Console.WriteLine($"Role : {p.Role}");
 }
+
+Console.WriteLine("========ENUM TO LIST========");
+//Casting Enums into Lists 
+var enumList = Enum.GetValues(typeof(Role)).Cast<Role>().ToList();
+foreach (var item in enumList)
+{
+    Console.WriteLine(item);
+}
+// Copying List
+var list = new List<string>()
+{
+    "Al-Ahly",
+    "Zamalek",
+    "Pyramids",
+    "Ismaily",
+    "Zed"
+};
+var newList = new List<string>(list);
+var newAnotherList = list.ToList();
+
+Console.ReadKey();
 
 public class Family
 //: IComparable<Family>
@@ -38,7 +61,6 @@ public class Family
     //}
     
 }
-
 public class NameSorting : IComparer<Family> 
 {
     public int Compare(Family x ,Family y) 
@@ -46,7 +68,6 @@ public class NameSorting : IComparer<Family>
         return x.FullName.CompareTo(y.FullName);
     }
 }
-
 public enum Role 
 {
     Father,
